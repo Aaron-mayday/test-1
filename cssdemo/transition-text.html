@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.box {
+				width: 100px;
+				height: 100px;
+				background-color: red;
+				margin: 100px auto;
+				/* 设置旋转的原点 */
+				/* transform-origin: 0 0; */
+				/* 过渡属性（例如transform） */
+				transition-property: transform;
+				/* 过渡持续时间（例如1s） */
+				transition-duration: 2s;
+				/* 过渡函数：ease:开始和结束慢，中间快。默认值 
+				            linear:匀速
+							ease-in:开始慢
+							ease-out:结束慢
+							ease-in-out:和ease类似，但比ease幅度大*/
+				/* transition-timing-function: ease-out; */
+				/* 过渡延迟时间 */
+				/* transition-delay: 1s; */
+				/* transition简写:属性 描述 函数 延迟 */
+				transition: transform 1s ease 0.5s,width 1s,height 1s;  
+			}
+
+			.box:hover {
+				transform: rotate(360deg);
+				width: 300px;
+				height: 200px;
+
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<h1>hello</h1>
+		</div>
+	</body>
+</html>

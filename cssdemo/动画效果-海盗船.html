@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			@keyframes awave {
+				50% {
+					transform: translate(-50px);
+				}
+			}
+
+			@keyframes ship {
+				50% {
+					transform: rotate(10deg);
+				}
+			}
+
+			.wave {
+				position: fixed;
+				bottom: 0px;
+			}
+
+			.wave1 {
+				position: absolute;
+				bottom: 50px;
+				animation: awave 4s linear infinite;
+			}
+
+			.wave2 {
+				position: absolute;
+				bottom: 0px;
+				animation: awave 6s linear infinite;
+			}
+
+			.wave3 {
+				position: absolute;
+				bottom: -50px;
+				animation: awave 3s linear infinite;
+			}
+
+			.ship {
+				position: fixed;
+				z-index: -1;
+				left: 20%;
+				bottom: 50px;
+				animation: ship 4s infinite;
+			}
+
+			.fish {
+				position: fixed;
+				bottom: 50px;
+				left: 0;
+				z-index: -2;
+				
+				animation: fish 6s ease-out infinite;
+			}
+			.fish img{
+				width: 100px;
+			}
+
+			@keyframes fish {
+				25% {
+					transform: rotate(-35deg);
+					left: 20%;
+					bottom: 220px;
+				}
+				
+				50%{
+					transform: rotate(70deg);
+					left: 50%;
+					bottom: 50px;
+				}
+				75%{
+					transform: rotate(-35deg);
+					left: 75%;
+					bottom: 220px;
+				}
+				100%{
+					transform: rotate(70deg);
+					left: 100%;
+					bottom: 0px;
+				}
+
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="wave">
+				<img class="wave1" src="../images/wave1.png">
+				<img class="wave2" src="../images/wave2.png">
+				<img class="wave3" src="../images/wave3.png">
+			</div>
+			<div class="ship">
+				<img src="../images/ship.png">
+			</div>
+			<div class="fish">
+				<img src="../images/yu.png">
+			</div>
+		</div>
+
+
+	</body>
+</html>

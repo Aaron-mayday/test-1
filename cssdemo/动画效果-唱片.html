@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 200px;
+				height: 200px;
+				border-radius: 50%;
+				overflow: hidden;
+			}
+			.box img{
+				width: 200px;
+				height: 200px;
+				animation:amin 2.5s linear infinite;
+			}
+			@keyframes amin{
+				from{transform: rotate(0deg);}
+				to{transform: rotate(360deg);}
+			}
+			.box:hover > img{
+				animation-play-state: paused;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			
+			<img src="../images/jay.jpg" >
+		</div>
+		
+	<!-- 	<button type="button" onclick="start()">开始</button>
+		<button type="button" onclick="stop()">停止</button> -->
+		
+		<!-- <script type="text/javascript">
+		let imgs = document.querySelector("img")
+			function start(){
+				imgs.style.animation = "pause"				
+			}
+			function stop(){
+				
+			}
+		</script> -->
+	</body>
+</html>

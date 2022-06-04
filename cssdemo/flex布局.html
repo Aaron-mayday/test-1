@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.container {
+				/* main axis:主轴
+				   cross axis:交叉轴*/
+				/* 设置flex容器
+				   flex-direction:设置flex项目排列方向
+				   justify-content:flex项目主轴排列方式
+				   align-items:flex项目在交叉轴的排列方式*/
+				/* flex-direction(起始位置和方向)
+				   row(默认值):主轴为水平方向，起点在左端
+				   row-reverse:水平，起点在右端
+				   column:垂直，从顶部开始
+				   column-reverse:垂直，从底部开始*/
+				/* justify-content（对齐方式）
+                   flex-start:左对齐
+                   flex-end:右对齐
+                   center:居中
+                   space-between:两端对齐
+                   space-around:每个项目两侧间隔相等*/
+				/* align-items
+				   flex-start:交叉轴的起点对齐
+				   flex-end:交叉轴的终点对齐
+				   center:交叉轴的中点对齐
+				   stretch(延伸)(默认值):如果项目未设置高度或设为auto，将占满整个容器的高度。*/
+				display: flex;
+				background-color: yellowgreen;
+				width: 400px;
+				height: 200px;
+
+				/* flex-direction: ; */
+				/* justify-content: space-between; */
+				/* align-items: center; */
+			}
+
+			.item {
+				/* width: 100px; */
+				/* height: 100px; */
+				background-color: red;
+				border: 1px solid blue;
+				/* flex-grow:属性定义项目的放大比例，默认为0，空间充足等比补全
+				   flex-shrink: 定义了项目的缩小比例，默认为1，如果空间不足，该项目将缩小
+				   flex-basis：主轴排列为宽度，交叉轴排列为高度，设置px，默认值是auto
+				   flex：综合上面三个样式
+				   align-self：flex项目的对齐方式（auto|flex-start|flex-end|center|baseline|stretch*/
+				/* flex-grow: 1; */
+				/* width: 300px; */
+				flex:1;
+			}
+			.big{
+				/* flex-grow: 3; */
+				/* width: 300px; */
+				/* flex-shrink: 2; */
+				/* flex-basis: 600px; */
+				flex: 2;
+				height: 100px;
+				align-self: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="item">123</div>
+			<div class="item">456</div>
+			<div class="item big">789</div>
+			<div class="item">135</div>
+			<div class="item">246</div>
+		</div>
+	</body>
+</html>

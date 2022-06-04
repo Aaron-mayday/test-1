@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			/* 清除浮动布局,重复使用 */
+			.clear::before,.clear::after{
+				content: "";
+				display: block;
+				/* 清除浮动布局 clear:both */
+				clear: both;
+			}
+
+			.content {
+				width: 200px;
+				height: 200px;
+				border: 1px solid red;
+				float: left;
+				box-sizing: border-box;
+			}
+
+			.aside {
+				display: flex;
+				width: 50px;
+				height: 200px;
+				border: 1px solid red;
+				box-sizing: border-box;
+				float: left;
+			}
+
+
+			.box {
+				width: 250px;
+				height: 200px;
+				background-color: yellow;
+				/* float: left; */
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container clear">
+			<div class="content">
+				内容
+			</div>
+			<div class="aside">
+				边栏
+			</div>
+		</div>
+
+		<!-- <div class="clear"> -->
+
+		</div>
+		<div class="box">
+
+		</div>
+	</body>
+</html>

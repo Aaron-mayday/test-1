@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			.container {
+				display: grid;
+				width: 400px;
+				margin: 0 auto;
+				border: 1px solid blue;
+				grid-template-columns: 300px 100px;
+				grid-template-rows: 50px 150px 150px 150px 50px;
+			}
+
+			.item {
+				border: 1px solid red;
+			}
+
+			.header {
+				grid-column: 1/3;
+			}
+
+			.docs {
+				grid-column: 1/2;
+				grid-row: 2/3;
+			}
+
+			.blogs {
+				grid-column: 1/2;
+				grid-row: 3/4;
+			}
+
+			.videos {
+				grid-column: 1/2;
+				grid-row: 4/5;
+			}
+
+			.aside {
+				grid-column: 2/3;
+				grid-row: 2/5;
+
+			}
+
+			.footer {
+				grid-column: 1/3;
+
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="header item">
+				header
+			</div>
+			<div class="docs item">
+				docs
+			</div>
+			<div class="blogs item">
+				blogs
+			</div>
+			<div class="videos item">
+				videos
+			</div>
+			<div class="aside item">
+				aside
+			</div>
+			<div class="footer item">
+				footer
+			</div>
+		</div>
+		<script>
+			
+			let arr = [2,5,3,1,6]
+			function sort(arr) {
+				for(let i = 0;i<arr.length-1;i++){
+					for(let j = 0;j<arr.length-1-i;j++){
+						if(arr[j]>arr[j+1]){
+							[arr[j],arr[j+1]]=[arr[j+1],arr[j]]
+						}
+					}
+				}
+				console.log(arr)
+				
+			}
+		</script>
+	</body>
+</html>

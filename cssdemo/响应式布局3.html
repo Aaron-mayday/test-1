@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			.container {
+				display: flex;
+				width: 600px;
+				margin: 0 auto;
+				justify-content: center;
+			}
+			.item {
+				width: 100px;
+				border: 1px solid red;
+			}
+
+			@media screen and (max-width:300px) {
+				.container {
+					width: 300px;
+					flex-direction: column;
+				}
+				.item {
+					width: 100%;
+				}
+			}
+		</style>
+
+	</head>
+	<body>
+		<div class="container">
+			<div class="item">
+				<h1>文档</h1>
+			</div>
+			<div class="item">
+				<h1>文档</h1>
+			</div>
+			<div class="item">
+				<h1>文档</h1>
+			</div>
+
+		</div>
+	</body>
+</html>

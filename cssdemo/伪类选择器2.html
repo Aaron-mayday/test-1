@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/* 伪元素选择器（增加元素） */
+			/* .line::before{
+				content: "------";
+			}
+			.line::after{
+				content: "------";
+			} */
+			.line::before,.line::after{
+				content: "-----";
+				color: red;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<h1 class="line">hello world</h1>
+		<h2 class="line">hello title</h2>
+		<p class="line">这是一个段落</p>
+	</body>
+</html>

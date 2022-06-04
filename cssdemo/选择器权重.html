@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/* 相同选择器：后面的会覆盖前面的
+			   不同选择器：ID(100)>CLASS(10)>element(1)
+			   层级选择器：按权重累加计算
+			   设置权重值最高：!important
+			 */
+/* 
+			.hc2 {
+				color: blue;
+			}
+
+			.hc {
+				color: red;
+			}
+ */
+			/* #hi {
+				color: yellow;
+			} */
+			/* 权重100+1=101 */
+			#box h1{
+				color: red 
+			}
+			/* 权重10+100=110 */ 
+			.box1 #hi{
+				color: yellow;
+			}
+			#hi{
+				color: green !important;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box" class="box1">
+			<h1 class="hc hc2" id="hi">hello world</h1>
+		</div>
+		
+	</body>
+</html>
