@@ -1,0 +1,16 @@
+h1{
+   color: green;
+}
+thead{
+    border: 1px solid red;
+}
+th {
+    border: 1px solid red;
+}
+tr {
+    text-align: center;
+    border: 1px solid red;
+}
+td {
+    border: 1px solid red;
+}
