@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<button type="button" class="get">查询数据</button>
+		<button type="button" class="post">添加数据</button>
+		<button type="button" class="put">修改数据</button>
+		<button type="button" class="delete">删除数据</button>
+		<script src="js/axios.min.js"></script>
+		<script type="text/javascript">
+		
+			//get请求查询数据
+			document.querySelector(".get").onclick = function(){
+				axios.get("/fruits").then( res => {
+				    console.log(res.data)
+				} )
+			}
+			//post请求添加数据
+			document.querySelector(".post").onclick = function(){
+				
+				axios.post("/fruits",{
+				    fruit:"草莓"
+				}).then( res => {
+				    console.log(res.data)
+				} )
+			}
+			//put请求修改数据
+			
+			document.querySelector(".put").onclick = function(){
+				axios.put("/fruits/0",{
+				    fruit:"西瓜"
+				}).then( res => {
+				    console.log(res.data)
+				} )
+			}
+			//delete请求删除数据
+			document.querySelector(".delete").onclick = function(){
+				axios.delete("/fruits/0").then( res => {
+				    console.log(res.data)
+				} )
+			}
+			
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

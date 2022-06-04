@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				
+			}
+			body{
+				height: 2000px;
+			}
+			.box{
+				width: 100px;
+				height: 100px;
+				background-color: red;
+				border: 1px solid white;
+				
+			}
+			.pos{
+				 position: absolute;
+				 top: 50px;
+				 left: 50px;
+				 z-index: 1;
+			}
+			.pos-ab{
+				position: absolute;
+				top: 50px;
+				left: 80px;
+				z-index: 10;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			1
+		</div>
+		<div class="box pos">
+			2
+		</div>
+		<div class="box pos-ab">
+			3
+		</div>
+		
+	</body>
+</html>
