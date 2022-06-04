@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// {
+			// 	var a = "hello"
+			// 	let b = "world"//块级作用域，大括号里的作用域在{}内
+			// }
+			
+			// let a = "hello"//let不可以重复定义
+			// let a = "world"
+			
+			// const a = 10 //const是常量，不可修改
+			// a=20
+			
+			//通常用const来定义函数，函数内的值是可以改变的
+			
+			//模板字符串``，可以换行，有新用法
+			// let str = `hello
+			// world`;
+			// let year = `2022`
+			// let month = `2`
+			// let day = `8`
+			// let result = `${year}年${month}月${day}日`
+			
+			// console.log(str)
+			// console.log(result)
+			
+			//解构赋值,前一行末尾要加;,简洁互换值
+			// let [a,b] = [10,20];
+			// [a,b] = [b,a]
+			// console.log(a)
+			// console.log(b)
+			
+			//let {name,age} = {name:"xiaoming",age:10} 
+			let xm = {name:"xiaoming",age:10}
+			function getName( {name} ){
+				return name
+			}
+			let result = getName(xm)
+			console.log(result)
+			
+			
+		</script>
+	</body>
+</html>

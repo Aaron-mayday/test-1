@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//es5
+			function Dog(name,age){
+				this.name = name;
+				this.age = age;
+			}
+			Dog.prototype.sayName = function(){
+				console.log(`我的名字是${this.name}`)
+			}
+			var dog = new Dog('旺财',15);
+			var bigdog = new Dog(`大哈`,20);
+			console.log(dog.age)
+			dog.sayName()
+			bigdog.sayName()
+		</script>
+	</body>
+</html>

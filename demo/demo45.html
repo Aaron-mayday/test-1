@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// alert('hello world')
+			// prompt("请输入你的姓名")
+			// confirm("请确认是否删除")
+			let target = Math.floor(Math.random()*100+1)
+			// let target = 98
+			function guessNumber(){
+				let number = prompt("请输入你的数字")
+				console.log(number)
+				
+				if(number == target){
+					alert('恭喜你回答正确')
+				}else if(number > target && number!=null){
+					alert('大于目标数字')
+					guessNumber();
+				}else if(number < target && number!=null){
+					alert('小于目标数字')
+					guessNumber();
+				}
+			}
+			guessNumber();
+		</script>
+	</body>
+</html>

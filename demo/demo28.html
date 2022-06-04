@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="text" name="" id="" value="" />
+		<button type="button">点我</button>
+		<ul class="fruit-list">
+			<li>草莓</li>
+			<li>草莓</li>
+			<li>草莓</li>
+		</ul>
+		<script type="text/javascript">
+			let btn = document.querySelector('button')
+			let ul = document.querySelector('ul')
+			let inp = document.querySelector('input')
+			let liList = document.querySelectorAll('.fruit-list li')
+			btn.onclick = function(){
+				let value = inp.value
+								
+				let li = document.createElement('li')
+				let txt = document.createTextNode(value)
+				ul.appendChild(li)
+				li.appendChild(txt)
+				
+			}
+			
+			for (let i in liList) {
+				liList[i].onclick = function(){
+					ul.removeChild(this)
+				}
+			}
+		</script>
+	</body>
+</html>

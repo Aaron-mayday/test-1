@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// function fun(n=100,m=200){
+			// 	console.log(n+m)
+			// }
+			// fun(10,20)
+			
+			//作用域链
+			// let str = "hello"
+			// function fun1(){
+			// 	let str = "world";
+			// 	let num = 10;
+			// 	function fun2(){
+			// 		let num = 20
+			// 		console.log(str);
+			// 		console.log(num);
+			// 	}
+			// 	fun2();
+			// }
+			// fun1()			
+			// console.log(str)
+			
+			//闭包
+			// function fun1(){
+			// 	function fun2(){
+			// 		console.log("I'm fun2")
+			// 	}
+			// 	return fun2;
+			// }
+			// const f = fun1();
+			// f();
+			
+			function fun1(){
+				let a = 10;
+				let b = 20;
+				function fun2(){
+					return a+b
+				}
+				return fun2;
+			}
+			const f = fun1();
+			const result = f();
+			console.log(result)
+			
+			
+		</script>
+	</body>
+</html>

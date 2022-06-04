@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<h1></h1>
+		<button type="button" class="stop">暂停</button>
+		<button type="button" class="clear">重置</button>
+		<script type="text/javascript">
+			let timer = setInterval(()=>{
+				let h1 = document.querySelector('h1')
+				let timeNow = new Date();
+				let hour = timeNow.getHours();
+				let minute = timeNow.getMinutes();
+				let second = timeNow.getSeconds();
+				let time = `${hour}:${minute}:${second}`
+				h1.innerHTML = time
+			},500)
+			let stop = document.querySelector('.stop')
+			let clear = document.querySelector('.clear')
+			stop.onclick = function(){
+				clearInterval(timer)
+			}
+		</script>
+	</body>
+</html>

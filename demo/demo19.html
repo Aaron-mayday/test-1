@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// let d = new Date();
+			// console.log(d.getDay())
+			Date.prototype.dFormat = function() {
+				let year = this.getFullYear();
+				let month = this.getMonth();
+				let day = this.getDate();
+				let result = `${year}年${month+1}月${day}日`
+				console.log(result)
+			}
+			let d = new Date("2011-08-08");
+			d.dFormat()
+		</script>
+	</body>
+</html>

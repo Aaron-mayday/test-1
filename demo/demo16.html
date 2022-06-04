@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var ary = [1,2,3,4,5]
+			// var ary = new Array(1,2,3,4)
+			Array.prototype.sayHello = function(){
+				console.log(`我是一个数组，我的长度是${this.length}`)
+			}
+			ary.sayHello()
+		</script>
+	</body>
+</html>

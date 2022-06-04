@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.active{
+				background-color: #FF0000
+			}
+		</style>
+	</head>
+	<body>
+		<h1 class="bbb">hello world</h1>
+		<h1 class="bbb">hello world</h1>
+		<h1 class="bbb">hello world</h1>
+		<h1 class="bbb">hello world</h1>
+		<h1 class="bbb">hello world</h1>
+		<script type="text/javascript">
+			let h1List = document.querySelectorAll('.bbb')
+			for (let i in h1List) {
+				h1List[i].onclick = function(){
+					if (this.className==='active') {
+						this.className=''
+					} else{
+						this.className = 'active'
+					}
+					
+				}
+			}
+		</script>
+	</body>
+</html>

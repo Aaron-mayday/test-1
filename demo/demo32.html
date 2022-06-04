@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.box {
+				width: 200px;
+				height: 200px;
+				background-color: yellowgreen;
+				display: none;
+			}
+
+		</style>
+	</head>
+	<body>
+		
+			<button class="show" type="button">显示</button>
+			<div class="box">
+				<button class="close" type="button">关闭</button>
+			</div>
+
+		<script type="text/javascript">
+			let show = document.querySelector('.show')
+			let box = document.querySelector('.box')
+			let close = document.querySelector('.close')
+			show.onclick = function(){
+				box.style.display = 'block'
+			}
+			close.onclick = function(){
+				box.style.display = 'none'
+			}
+		</script>
+		
+	</body>
+</html>

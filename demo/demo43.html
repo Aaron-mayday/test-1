@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			body {
+				height: 2000px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>window.onscroll事件</h1>
+		<script type="text/javascript">
+			let timer = null;
+			window.onscroll = function() {
+				if(timer!==null){
+					clearTimeout(timer);
+				}
+				timer = setTimeout(()=>{
+					console.log('hello world')
+					timer = null
+				},500)
+			}
+		</script>
+	</body>
+</html>

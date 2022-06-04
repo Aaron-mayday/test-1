@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			img{
+				width: 300px;
+				height: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<img src="images/01.jpg" id="imgs">
+		</div>
+		<button type="button" class="bbb">1</button>
+		<button type="button" class="bbb">2</button>
+		<button type="button" class="bbb">3</button>
+		
+		<script type="text/javascript">
+			let imgList = ['images/01.jpg','images/02.jpg','images/03.jpg']
+			let imgs = document.querySelector('#imgs')
+			let btns = document.querySelectorAll('.bbb')
+			for(let i in btns){
+				btns[i].onclick = function(){
+					imgs.src = imgList[i]
+				}
+			}
+		</script>
+	</body>
+</html>

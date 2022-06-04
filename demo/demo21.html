@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<h1 id="title" class="hel">hello world</h1>
+		<button type="button" class="btn">1</button>
+		<button type="button" class="btn">2</button>
+		<button type="button" class="btn">3</button>
+		<script type="text/javascript">
+			// getElementById返回值是一个dom节点
+			// let h1 = document.getElementById('title')
+			// console.log(h1.innerHTML)
+			// h1.innerHTML = "你好世界"
+			// //getElementsByClassName返回值是一个dom节点的集合
+			// let btns = document.getElementsByClassName('btn')
+			// console.log(btns)
+			// for(let i in btns){
+			// 	// console.log(i)
+			// 	btns[i].innerHTML = "test"
+			// }
+			
+			
+			// let h1 = document.querySelector('#title');
+			// h1.innerHTML = "nihao"
+			
+			let btns = document.querySelectorAll('.btn')
+			console.log(btns)
+			for(let i in btns){
+				// console.log(i)
+				btns[i].innerHTML = "test"
+			}
+			
+		</script>
+	</body>
+</html>

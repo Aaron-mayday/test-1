@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-3.5.1.js" type="text/javascript"></script>
+    <!-- <link rel="stylesheet" href="css/a.css" type="text/css"> -->
+    <style>
+      @import url(css/a.css);
+    </style>
+  </head>
+  <body>
+    <div align="center">
+      城市：
+      <select id="pro">
+        <option value="">请选择</option>
+      </select>
+      <select id="city">
+        <option value="">请选择</option>
+      </select>
+    </div>
+
+    <script>
+      var proList = ["北京", "山西", "山东", "河北", "河南"];
+
+      var cityList = [
+        ["东城区", "西城区", "朝阳区"],
+        ["太原市", "大同市", "临汾市"],
+        ["济南市", "青岛市", "烟台市"],
+        ["石家庄市", "保定市", "邢台市"],
+        ["郑州市", "南阳市", "焦作市"],
+      ];
+      // 省份下拉菜单
+      for (var i = 0; i < proList.length; i++) {
+        var opt = $("<option value='" + i + "'>" + proList[i] + "</option>");
+        $("#pro").append(opt);
+      }
+      // 省份绑定change事件
+      $("#pro").change(function () {
+        // 得到下拉选项框中的值
+        var index = $(this).val();
+        // 得到被选中的省份对应的城市（二维数组）
+        var citys = cityList[index];
+        // 移除城市下拉框中的选项（保留第一个）
+        $("#city option:gt(0)").remove();
+        // 加载城市下拉框
+        for (var i = 0; i < citys.length; i++) {
+          // 定义下拉选项
+          var opt = $("<option value='" + i + "'>" + citys[i] + "</option>");
+          $("#city").append(opt);
+        }
+      });
+    </script>
+  </body>
+</html>

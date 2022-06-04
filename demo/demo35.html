@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.show{
+				
+			}
+			.box{
+				display: none; 
+				width: 100px;
+				height: 100px;
+				background-color: yellow;
+			}
+			.close{
+				
+			}
+		</style>
+	</head>
+	<body>
+		<button type="button" class="show">显示</button>
+		<div class="box">
+			<button type="button" class="close">关闭</button>
+		</div>
+		
+		<script type="text/javascript">
+			let show = document.querySelector('.show')
+			let box = document.querySelector('.box')
+			let close = document.querySelector('.close')
+			show.addEventListener('click',function(){
+				box.style.display = 'block'
+			})
+			close.addEventListener('click',function(e){
+				box.style.display = 'none'
+				e.stopPropagation()
+			})
+			box.addEventListener('click',function(){
+				this.style.backgroundColor = 'red'
+				
+			})
+			
+		</script>
+	</body>
+</html>

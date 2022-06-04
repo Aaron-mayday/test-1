@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+		//通过正则表达式，匹配要替换的内容。例：去掉字符串中的字母
+			var str = "12s2dfsda158"
+			var reg = /[a-zA-Z]/g  //g是全局匹配
+			var result = str.replace(reg,"")
+			console.log(result)
+		</script>
+	</body>
+</html>

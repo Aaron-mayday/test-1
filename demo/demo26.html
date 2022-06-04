@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.swiper{
+				width: 640px;
+				height: 320px;
+				overflow: hidden;
+				position: relative;
+			}
+			.images-container{
+				width: 1920px;
+				height: 320px;
+				display: flex;
+				transition: transform 0.3s;
+			}
+			.images-container img{
+				width: 640px;
+				height: 320px;
+				
+			}
+		/* 	.images-container:hover{
+				transform: translate(-640px);
+			} */
+			.number-list{
+				position: absolute;
+				bottom: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="swiper">
+			<div class="images-container">
+				<img src="images/01.jpg" >
+				<img src="images/02.jpg" >
+				<img src="images/03.jpg" >
+			</div>
+			<div class="number-list">
+				<button type="button">1</button>
+				<button type="button">2</button>
+				<button type="button">3</button>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			let btnList = document.querySelectorAll('.number-list button')
+			let con = document.querySelector('.images-container')
+			for (let i in btnList) {
+				btnList[i].onclick = function(){
+					// 0*640 = 0
+					// 1*640 = 640
+					// 2*640 = 1280
+					con.style.transform = `translate(${-640*i}px)`
+				}
+			}
+		</script>
+	</body>
+</html>

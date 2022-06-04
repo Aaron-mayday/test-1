@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.big {
+				width: 200px;
+				height: 200px;
+				background-color: #FF0000
+			}
+
+			.mid {
+				width: 150px;
+				height: 150px;
+				background-color: #9ACD32;
+			}
+
+			.small {
+				width: 100px;
+				height: 100px;
+				background-color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="big">
+			<div class="mid">
+				<div class="small">
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			let big = document.querySelector('.big')
+			let mid = document.querySelector('.mid')
+			let sml = document.querySelector('.small')
+			big.addEventListener('click',function(){
+				console.log('big')
+			},true)
+			mid.addEventListener('click',function(){
+				console.log('mid')
+			},true)
+			sml.addEventListener('click',function(){
+				console.log('small')
+			},true)
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="js/jquery-3.5.1.js" type="text/javascript"></script>
+    <!-- <link rel="stylesheet" href="css/a.css" type="text/css"> -->
+    <style>
+      @import url(css/a.css);
+    </style>
+  </head>
+  <body>
+    <div align="center">
+      城市：
+      <select id="pro">
+        <option value="">请选择</option>
+      </select>
+      <select id="city">
+        <option value="">请选择</option>
+      </select>
+    </div>
+
+    <script>
+
+        var proList = ["北京","山西","山东","河北","河南"];
+        
+        var cityList = [
+            ["东城区","西城区","朝阳区"],
+            ["太原市","大同市","临汾市"],
+            ["济南市","青岛市","烟台市"],
+            ["石家庄市","保定市","邢台市"],
+            ["郑州市","南阳市","焦作市"]
+        ];
+        // 省份下拉菜单
+        for (var i = 0; i < proList.length; i++){
+            // 创建元素节点
+            var opt = document.createElement("option");
+            // 创建文本节点
+            var txt = document.createTextNode(proList[i]);
+            // 想option元素中追加文本节点
+            opt.appendChild(txt);
+            // 设置下拉框对应的value属性
+            opt.value = i;
+            // 将option元素追加到省份下拉框元素
+            document.getElementById("pro").appendChild(opt);
+        }
+        // 省份change事件
+        document.getElementById("pro").onchange = function(){
+            // 清除城市下拉框中的数据
+            document.getElementById("city").options.length = 1;
+            // 获取下拉框被选中的值
+            var index = document.getElementById("pro").value;
+            // 判断是否选中的指定省份（index值不为空）
+            if (index == ""){
+                document.getElementById("city").innerHTML = '<option value="">请选择</option>';
+                return;
+            }
+            // 获取对应城市二维数组中对应的数值
+            var citys = cityList[index];
+            // 遍历城市数组
+            for (var i = 0; i < citys.length; i++){
+            // 创建元素节点
+            var opt = document.createElement("option");
+            // 创建文本节点
+            var txt = document.createTextNode(citys[i]);
+            // 想option元素中追加文本节点
+            opt.appendChild(txt);
+            // 将option元素追加到省份下拉框元素
+            document.getElementById("city").appendChild(opt);
+        }
+
+        }
+
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			class Dog{
+				constructor(name,age) {
+				    this.name = name;
+					this.age = age;
+					
+				}
+				sayName(){
+					console.log(`叫${this.name}`)
+				}
+			}
+			class Cat extends Dog{
+				
+			}
+			let dog1 = new Dog(`旺财`,11);
+			console.log(dog1.name)
+			dog1.sayName()
+			let cat = new Cat(`miaomiao`,12)
+			console.log(cat.name)
+			cat.sayName()
+		</script>
+	</body>
+</html>

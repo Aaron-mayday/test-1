@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// var reg = new RegExp("123")
+			//邮箱格式
+			var reg = /^\w{5,12}@\w+\.com$/  //[a-z0-9A-Z_]简写\w，代表数字，字母，下划线
+			var str = "dfsd223@qq.com"
+			var a = reg.test(str)
+			console.log(a)
+			if (a) {
+				console.log("通过验证")
+			} else{
+				consol.log("验证失败")
+			}
+		</script>
+	</body>
+</html>
