@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.box {
+				width: 200px;
+				height: 200px;
+				/* display: block; */
+				background-color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<button type="button" class="show">显示</button>
+		<button type="button" class="hide">隐藏</button>
+		<button type="button" class="fadeIn">渐显</button>
+		<button type="button" class="fadeOut">渐隐</button>
+		<div class="box">
+
+		</div>
+		<script src="js/jquery-3.5.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//隐藏
+			$('.hide').click(function() {
+				$('.box').hide(500)
+			})
+			//显示
+			$('.show').click(function() {
+				$('.box').show(500)
+			})
+			//渐显
+			$('.fadeIn').click(function() {
+				$('.box').fadeIn(500)
+			})
+			//渐隐
+			$('.fadeOut').click(function() {
+				$('.box').fadeOut(500)
+			})
+		</script>
+	</body>
+</html>

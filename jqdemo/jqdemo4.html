@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 200px;
+				height: 200px;
+				border: 1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<button type="button">按钮</button>
+		</div>
+		<div class="box">
+			<button type="button">按钮</button>
+		</div>
+		<div class="box">
+			<button type="button">按钮</button>
+		</div>
+		<script src="js/jquery-3.5.1.js"></script>
+		<script type="text/javascript">
+			$('.box').click(function(){
+				// $(this).css({'border':'1px solid yellow'})
+				//find("选择器")获取子集
+				$(this).find('button').css('background-color','red')
+							
+			})
+			//parent()获取父级
+			$('button').click(function(){
+				$(this).parent().css('background-color','yellow')
+			})
+		</script>
+	</body>
+</html>

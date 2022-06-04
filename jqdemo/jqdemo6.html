@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.box {
+				width: 200px;
+				height: 200px;
+				background-color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+
+		</div>
+		<script src="js/jquery-3.5.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			// click()
+			// // mouseenter()
+			// $('.box').mouseenter(function() {
+			// 	console.log('hello world')
+			// })
+			// // mouseleave()
+			// $('.box').mouseleave(function() {
+			// 	console.log('leave world')
+			// })
+			// // mousemove()
+			// $('.box').mousemove(function() {
+			// 	console.log('move')
+			// })
+			// on()事件委托
+
+			//链式操作
+			$('.box').mouseenter(function() {
+				console.log('hello world')
+			}).mouseleave(function() {
+				console.log('leave world')
+			}).mousemove(function(e) {
+				let x = e.pageX;
+				let y = e.pageY;
+				console.log(`x的坐标是${x},y的坐标是${y}`)
+			})
+		</script>
+	</body>
+</html>
